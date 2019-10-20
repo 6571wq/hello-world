@@ -1,2 +1,27 @@
-//å¼€è¾Ÿçª—å£
-include<stdio.h>
+#include "windows.h" 
+#include <GL/glut.h>
+
+//ÉèÖÃäÖÈ¾×´Ì¬
+void init()
+{
+	glClearColor(0.0f,0.0f,1.0f,1.0f);
+}
+//»æÖÆ³¡¾°
+void display()
+{
+	glClear(GL_COLOR_BUFFER_BIT);//ÓÃµ±Ç°Çå³ıÑÕÉ«Çå³ı´°¿Ú
+	glFlush();//Ë¢ĞÂ»æÍ¼ÃüÁî
+}
+
+int main( )
+{
+  glutInitDisplayMode(GLUT_RGB|GLUT_SINGLE);
+  glutCreateWindow("Simple");
+
+  init();
+
+  glutDisplayFunc( display );
+
+  glutMainLoop();
+  return 0;
+}
